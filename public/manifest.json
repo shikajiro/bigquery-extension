@@ -1,0 +1,27 @@
+{
+  "name": "bigquery-extension",
+  "description": "Extension that extends BigQuery",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "scripting"
+  ],
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://console.cloud.google.com/bigquery*"
+      ],
+      "js": [
+        "js/content_script.js"
+      ]
+    }
+  ]
+}
